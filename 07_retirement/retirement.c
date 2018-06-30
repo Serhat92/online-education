@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-  struct retire_info {
+  struct _retire_info {
     int months;
     double contribution;
     double rate_of_return;
   };
-  typedef struct retire_info ret;
+  typedef struct _retire_info retire_info;
 
 
-void retirement(int startAge, double initial, ret working, ret retired) {
+void retirement(int startAge, double initial, retire_info working, retire_info retired) {
 
   
 
@@ -39,9 +39,9 @@ void retirement(int startAge, double initial, ret working, ret retired) {
   }
 }
 
-  int main() {
-    ret retired;
-    ret working;
+int main(void) {
+    retire_info retired;
+    retire_info working;
     int startAge = 27;
     double initial = 21345.00;
     working.months = 3; 
